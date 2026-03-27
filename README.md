@@ -49,69 +49,6 @@ With the increasing volume of emails received daily, spam detection has become c
 
 ---
 
-## 📁 Project Structure with Owner Labels
-
-spam-email-detection/
-│
-├── README.md # [Both] Project documentation
-├── requirements.txt # [Tanzeela] Dependencies
-│
-├── data/
-│ ├── raw/ # [Tanzeela] Original dataset
-│ │ └── spam.csv
-│ ├── processed/ # [Tanzeela] Cleaned data
-│ │ └── spam_processed.csv
-│ └── features/ # [Tanzeela] Extracted features
-│ └── tfidf_features.npz
-│
-├── notebooks/
-│ ├── 01_data_cleaning.ipynb # [Tanzeela]
-│ ├── 02_eda.ipynb # [Atif]
-│ ├── 03_feature_engineering.ipynb # [Tanzeela]
-│ ├── 04_model_training.ipynb # [Tanzeela]
-│ ├── 05_evaluation.ipynb # [Tanzeela]
-│ └── 06_visualizations.ipynb # [Atif]
-│
-├── src/
-│ ├── preprocess.py # [Tanzeela]
-│ ├── features.py # [Tanzeela]
-│ ├── models.py # [Tanzeela]
-│ └── visualize.py # [Atif]
-│
-├── docs/
-│ ├── report/
-│ │ ├── 01_introduction.md # [Atif]
-│ │ ├── 02_methodology.md # [Tanzeela]
-│ │ ├── 03_results.md # [Tanzeela]
-│ │ ├── 04_conclusion.md # [Both]
-│ │ └── project_report.pdf # [Both]
-│ ├── flowchart.png # [Atif]
-│ └── methodology_diagram.pptx # [Atif]
-│
-├── presentation/ # [Atif]
-│ ├── Project_Presentation.pptx
-│ └── presentation_notes.md
-│
-├── panaflex/ # [Atif]
-│ ├── panaflex_design.ai
-│ └── panaflex_final.pdf
-│
-├── models/ # [Tanzeela]
-│ ├── logistic_regression.pkl
-│ ├── random_forest.pkl
-│ ├── svm.pkl
-│ └── xgboost_best.pkl
-│
-└── results/ # [Both]
-├── confusion_matrix.png
-├── roc_curves.png
-├── feature_importance.png
-└── model_comparison.csv
-
-
-
----
-
 ## 📊 Dataset Information
 
 **Source:** SMS Spam Collection v.1 (UCI Machine Learning Repository)
@@ -165,10 +102,10 @@ The spam detection system successfully classifies emails with high accuracy. The
 
 ## 📧 Contact
 
-| Name | Roll Number | Email | GitHub |
-|------|-------------|-------|--------|
-| **Tanzeela Fatima** | 12 | tanzeela.fatima@university.edu | github.com/tanzeela |
-| **Atif Zaheer** | 7 | atif.zaheer@university.edu | github.com/atif |
+| Name | Roll Number |
+|------|-------------|
+| **Tanzeela Fatima** | 12 |
+| **Atif Zaheer** | 7 |
 
 ---
 
