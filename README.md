@@ -97,18 +97,6 @@ Spam-Email-Detection/
 │   ├── 03_model_training.ipynb
 │   └── 04_evaluation.ipynb
 │
-├── data/
-│   ├── sms_spam_processed.csv
-│   ├── X_train_tfidf.npz
-│   └── X_test_tfidf.npz
-│
-├── models/
-│   ├── tfidf_vectorizer.pkl
-│   └── best_model.pkl
-│
-├── results/
-│   └── model_comparison.csv
-│
 ├── README.md
 └── requirements.txt
 ```
@@ -179,4 +167,3 @@ The Random Forest model achieved the best performance with **98.57% accuracy**, 
 ---
 
 ⭐ Star this repository if you found it helpful!
-```
