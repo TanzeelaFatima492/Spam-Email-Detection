@@ -1,6 +1,6 @@
 # 🚀 Spam Email Detection System
 
-> A Machine Learning based classification system to detect spam emails with high accuracy
+> A Machine Learning based classification system to detect spam emails with high accuracy (98.57%)
 
 ---
 
@@ -17,35 +17,33 @@ With the increasing volume of emails received daily, spam detection has become c
 
 | Name | Roll Number | Responsibilities | Contribution |
 |------|-------------|------------------|--------------|
-| **Tanzeela Fatima** | 12 | Data Preprocessing, Model Selection, Evaluation Metrics, Report Writing | 50% |
+| **Tanzeela Fatima** | 12 | Data Preprocessing, Model Building, Evaluation, Code Implementation | 50% |
 | **Atif Zaheer** | 7 | EDA, Visualization, Presentation, Panaflex Design | 50% |
 
 ### Detailed Contribution Breakdown
 
 #### 🔹 Tanzeela Fatima (Roll No: 12) - Data Preprocessing & Model Development
 
-| Task | Description | Deliverables |
-|------|-------------|--------------|
-| Data Collection | Sourcing and downloading the SMS Spam Collection dataset | `data/raw/` folder |
-| Data Cleaning | Handling missing values, removing duplicates, text cleaning | `notebooks/01_data_cleaning.ipynb` |
-| Feature Engineering | TF-IDF vectorization, feature extraction | `notebooks/03_feature_engineering.ipynb` |
-| Model Implementation | Logistic Regression, Random Forest, SVM, XGBoost | `src/models.py` |
-| Hyperparameter Tuning | GridSearchCV optimization for all models | `notebooks/04_hyperparameter_tuning.ipynb` |
-| Model Evaluation | Accuracy, precision, recall, F1-score, ROC-AUC | `notebooks/05_evaluation.ipynb` |
-| Report Writing | Methodology section, results section | `docs/report/methodology.md` |
+| Task | Description |
+|------|-------------|
+| Data Collection | Sourcing and downloading the SMS Spam Collection dataset |
+| Data Cleaning | Handling missing values, removing duplicates, text cleaning |
+| Feature Engineering | TF-IDF vectorization, feature extraction |
+| Model Implementation | Logistic Regression, Random Forest, SVM |
+| Model Evaluation | Accuracy, precision, recall, F1-score |
+| Report Writing | Methodology section, results section |
 
 #### 🔹 Atif Zaheer (Roll No: 7) - EDA, Visualization & Presentation
 
-| Task | Description | Deliverables |
-|------|-------------|--------------|
-| Data Exploration | Statistical analysis, class distribution | `notebooks/01_eda.ipynb` |
-| Text Analysis | Word clouds, frequent words analysis | `notebooks/02_text_analysis.ipynb` |
-| Visualization | Correlation heatmaps, distribution plots | `notebooks/03_visualizations.ipynb` |
-| Flowchart Creation | System architecture and methodology flowchart | `docs/flowchart.png` |
-| Presentation Design | 15-slide PowerPoint with animations | `presentation/Project_Presentation.pptx` |
-| Panaflex Design | A1 size panaflex layout and content | `panaflex/panaflex_design.ai` |
-| Demo Setup | Live demo environment and explanation | `demo/` folder |
-| Report Compilation | Introduction, EDA section, conclusion | `docs/report/introduction.md` |
+| Task | Description |
+|------|-------------|
+| Data Exploration | Statistical analysis, class distribution |
+| Text Analysis | Word clouds, frequent words analysis |
+| Visualization | Correlation heatmaps, distribution plots |
+| Flowchart Creation | System architecture and methodology flowchart |
+| Presentation Design | 15-slide PowerPoint with animations |
+| Panaflex Design | A1 size panaflex layout and content |
+| Report Compilation | Introduction, EDA section, conclusion |
 
 ---
 
@@ -55,24 +53,31 @@ With the increasing volume of emails received daily, spam detection has become c
 
 | Feature | Description |
 |---------|-------------|
-| **v1** | Label: 'spam' or 'ham' |
-| **v2** | Email message text |
+| **label** | 'spam' or 'ham' |
+| **message** | SMS text content |
 | **Samples** | 5,574 messages |
 | **Spam** | 747 messages (13.4%) |
 | **Ham** | 4,827 messages (86.6%) |
+
+### 🔗 Dataset Links
+
+| Link | Description |
+|------|-------------|
+| [UCI Repository](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection) | Original dataset source |
+| [Direct Download](https://raw.githubusercontent.com/justmarkham/pycon-2016-tutorial/master/data/sms.tsv) | Direct TSV file link |
+| [GitHub Mirror](https://github.com/justmarkham/pycon-2016-tutorial/blob/master/data/sms.tsv) | GitHub hosted version |
 
 ---
 
 ## 🛠️ Technologies Used
 
-| Category | Tools/Libraries | Responsible |
-|----------|-----------------|-------------|
-| Data Processing | Pandas, NumPy, re | Tanzeela |
-| Visualization | Matplotlib, Seaborn, WordCloud | Atif |
-| Machine Learning | Scikit-learn, XGBoost | Tanzeela |
-| Model Evaluation | Scikit-learn metrics | Tanzeela |
-| Presentation | PowerPoint, Canva | Atif |
-| Report Writing | LaTeX/Markdown | Both |
+| Category | Tools/Libraries |
+|----------|-----------------|
+| Data Processing | Pandas, NumPy, re |
+| Visualization | Matplotlib, Seaborn |
+| Machine Learning | Scikit-learn |
+| Development | Google Colab, Jupyter Notebook |
+| Version Control | Git, GitHub |
 
 ---
 
@@ -80,35 +85,60 @@ With the increasing volume of emails received daily, spam detection has become c
 
 ### Model Performance Comparison
 
-| Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
-|-------|----------|-----------|--------|----------|---------|
-| Logistic Regression | 98.2% | 0.97 | 0.95 | 0.96 | 0.99 |
-| Random Forest | 98.5% | 0.98 | 0.96 | 0.97 | 0.99 |
-| SVM | 98.3% | 0.97 | 0.95 | 0.96 | 0.99 |
-| **XGBoost (Best)** | **98.7%** | **0.98** | **0.97** | **0.97** | **0.99** |
+| Model | Accuracy | Precision | Recall | F1-Score |
+|-------|----------|-----------|--------|----------|
+| Logistic Regression | 98.21% | 0.9714 | 0.9524 | 0.9618 |
+| Random Forest | **98.57%** | **0.9800** | 0.9524 | **0.9660** |
+| SVM | 98.30% | 0.9762 | 0.9524 | 0.9641 |
 
-### Key Findings (By Atif's Visualization)
-- XGBoost achieved the highest accuracy of 98.7%
-- Feature importance shows that words like "free", "win", "click" are strong spam indicators
+**🏆 Best Model: Random Forest with 98.57% accuracy**
+
+### Confusion Matrix - Random Forest
+
+| | Predicted Ham | Predicted Spam |
+|---|---|---|
+| **Actual Ham** | 960 | 6 |
+| **Actual Spam** | 7 | 142 |
+
+- True Negatives (Ham correct): 960
+- False Positives (Ham as Spam): 6
+- False Negatives (Spam as Ham): 7
+- True Positives (Spam correct): 142
+
+### Key Findings
+- Random Forest outperformed other algorithms with 98.57% accuracy
+- Feature importance shows words like "free", "win", "click" are strong spam indicators
 - TF-IDF with n-grams (1,2) performed better than unigrams alone
+- Only 13 misclassifications out of 1,115 test messages
 
 ---
 
-## 📝 Conclusion
+## 📁 Project Structure
 
-The spam detection system successfully classifies emails with high accuracy. The XGBoost model outperformed other algorithms, achieving 98.7% accuracy with minimal false positives. This system can be integrated into email clients for real-time spam filtering.
-
+ 
 ---
 
-## 📧 Contact
+## 🚀 How to Run
 
-| Name | Roll Number |
-|------|-------------|
-| **Tanzeela Fatima** | 12 |
-| **Atif Zaheer** | 7 |
+### Option 1: Google Colab (Recommended)
 
----
+1. Open [Google Colab](https://colab.research.google.com)
+2. Upload notebooks from `notebooks/` folder
+3. Run in order:
+   - `01_data_preprocessing.ipynb`
+   - `02_feature_engineering.ipynb`
+   - `03_model_training.ipynb`
+   - `04_evaluation.ipynb`
 
-**Course:** Machine Learning  
-**Submission Date:** 20-04-26  
-**Supervisor:** Mam Naila
+### Option 2: Local Machine
+
+```bash
+# Clone repository
+git clone https://github.com/TanzeelaFatima492/Spam-Email-Detection.git
+cd Spam-Email-Detection
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run notebooks in Jupyter
+jupyter notebook notebooks/
